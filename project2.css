@@ -1,0 +1,35 @@
+html {
+
+	width: 100%;
+	heigth: 100%;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+body {
+
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.left {
+	
+	float: left;
+	background: #949494;
+	width: 20%;
+	heigth: 100%;
+	border-style: solid;
+	
+	
+}
+
+.midt {
+
+	float: left;
+	background: #949494;
+	width: 79%;
+
+}
+
