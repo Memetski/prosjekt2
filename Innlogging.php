@@ -16,10 +16,10 @@ if(isset($_SESSION['uname']) && $_SESSION['uname'] != ''){ // Henvis til forside
 <script type="text/javascript" src="jquery-1.9.1.js"></script>
 <script type="text/javascript">
 
-$(document).ready(function()) {
+$(document).ready(function() {
 
 $('#username').focus();
-$('"login').click(function){
+$('#login').click(function(){
 
 	var username = $('#username');
 	var passord  = $('#password');
@@ -58,9 +58,9 @@ $('"login').click(function){
 		}
 		return false;
 
-	}
+	});
 
-}
+});
 
 
 
@@ -175,7 +175,7 @@ h1 a:hover{
 	<td></td>
 </tr>
 <tr>
-	<td colspan="2"><input type="submit" name="login" id="login" class="as_button" value="Login &raquo;" /></td>
+	<td colspan="2"><input type="button" name="login" id="login" class="as_button" value="Login &raquo;" /></td>
 </tr>
 </table>
 </form>

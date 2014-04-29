@@ -17,7 +17,7 @@
 				<img src="logo.png" width="100%" height="100%" alt="Logo">
 				
 				
-				<p> Trykk <a href="Innlogging.php">Her</a> for å logge inn</p> 
+				<p> Trykk <a href="innlogging.php">Her</a> for å logge inn</p> 
 			
 			
 			
