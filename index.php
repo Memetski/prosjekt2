@@ -15,7 +15,9 @@
 			<div class="left">
 			
 				<img src="logo.png" width="100%" height="100%" alt="Logo">
-				<h1>     </h1>
+				
+				
+				<p> Trykk <a href="Innlogging.php">Her</a> for å logge inn</p> 
 			
 			
 			
@@ -24,7 +26,7 @@
 			
 			<div class="midt">
 			
-				<h1>    </h1>
+				<h1>  Velkommen  </h1>
 			
 			</div>
 		

@@ -1,6 +1,6 @@
 <?php
-
-'include db.php';
+session_start();					// Starter sesjon
+require_once 'db.php';				// Inkluderer filen db
 
 
 if(isset($_SESSION['uname']) && $_SESSION['uname'] != ''){ // Henvis til forsiden dersom bruker er innlogget
@@ -153,13 +153,7 @@ h1 a:hover{
 <body>
 <div class="as_wrapper">
 <h1><a href="">Innloggingsskjema for CentralPub</a></h1>
-<table>
-<tr>
-	<th>Username</th>
-    <th>Password</th>
-</tr>
 
-</table>
 <br/>
 <form>
 <table class="mytable">
