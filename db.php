@@ -23,11 +23,5 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // $stmt = $db->prepare ("INSERT INTO bruker (uname, pwd, fornavn, etternavn, email) VALUES (?, ?, ?, ?, ?)");
 // $stmt->execute (array ($_POST["uname"], $password, $_POST["fornavn"], $_POST["etternavn"], $_POST["email"]));
 
-=======
-try {
-	$db = new PDO('mysql:host=127.0.0.1;dbname=centralpub', 'root', '');
-} catch (PDOException $e) {
-    die ('Kunne ikke koble til serveren : ' . $e->getMessage());
-}
->>>>>>> 7bc55cd63beb0314442ed0a24a9947c5108425b4
+
 ?>
