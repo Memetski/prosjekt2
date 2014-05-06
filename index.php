@@ -18,7 +18,7 @@
 				
 				
 				<p> Trykk <a href="innlogging.php">Her</a> for å logge inn</p> 
-			
+				<p> Trykk <a href="registrer_ny_bruker.php">Her</a> for å registrere deg</p> 
 			
 			
 			</div>
