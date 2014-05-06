@@ -7,7 +7,7 @@
 <script src="sample-registration-form-validation.js"></script>  
 </head>  
 
- 
+
 <h1>Registrer ny bruker</h1>  
 
 <form action='database.php' method="POST">  
@@ -15,7 +15,7 @@
 <label for="uname">Bruker ID:</label> 
 <input type="text" name="uname" size="12" /><br>
 <label for="passid">Passord:</label>
-<input type="password" name="pwd" size="12" /> <br>
+<input type="password" name="pwd" size="12" /><br>
 <label for="username">Fornavn:</label> 
 <input type="text" name="fornavn" size="50" /><br>
 <label for="username">Etternavn:</label> 
