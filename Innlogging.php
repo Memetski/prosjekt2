@@ -47,7 +47,7 @@ $('#login').click(function(){
 				if(responseText == 0){
 					login_result.html('<span class="error">Username or Password Incorrect!</span>');
 				}
-				else if(responseText == 1){
+				else if(responseText == 'OK'){
 					window.location = 'index.php';
 				}
 				else{
