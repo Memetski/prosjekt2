@@ -38,10 +38,12 @@ $('#login').click(function(){
 		}
 		
 		if(username.val() != '' && password.val() != ''){ // Sjekker at brukerdataene som leses inn har innhold
-			var UrlToPass = 'action=login&username='+username.val()+'&password='+password.val();
+			//var UrlToPass = 'action=login&username='+username.val()+'&password='+password.val();
+			//var UrlToPass = 'uname': form.uname.value, 'pwd': form.pwd.value,
 			$.ajax({ // Utfører Ajax-request mot php-fil som sjekker opp mot databasen
 			type : 'POST',
-			data : UrlToPass,
+			data: {'uname': form.uname.value, 'pwd': form.pwd.value},
+			//data : UrlToPass,
 			url  : 'ErPaalogget.php',
 			success: function(responseText){ // Henter resultatet og tilpasser de aktuelle scenariene
 				if(responseText == 0){
