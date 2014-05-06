@@ -42,7 +42,7 @@ $('#login').click(function(){
 			//var UrlToPass = 'uname': form.uname.value, 'pwd': form.pwd.value,
 			$.ajax({ // Utfører Ajax-request mot php-fil som sjekker opp mot databasen
 			type : 'POST',
-			data: {'uname': form.uname.value, 'pwd': form.pwd.value},
+			data: {'username': username.val(), 'password': password.val()},
 			//data : UrlToPass,
 			url  : 'ErPaalogget.php',
 			success: function(responseText){ // Henter resultatet og tilpasser de aktuelle scenariene
