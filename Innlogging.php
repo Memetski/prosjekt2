@@ -22,7 +22,7 @@ $('#username').focus();
 $('#login').click(function(){
 
 	var username = $('#username');
-	var passord  = $('#password');
+	var password  = $('#password');
 	var login_result = $('.login_result');
 	
 	login_result.html('loading..'); // Animert pre-loader
