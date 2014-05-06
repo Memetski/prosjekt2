@@ -70,12 +70,6 @@ $('#login').click(function(){
 
 </script>
 
-<style type="text/css">
-
-
-
-</style>
-
 
 </head>
 
