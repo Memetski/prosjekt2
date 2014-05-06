@@ -5,13 +5,13 @@ session_start();
 require_once 'db.php';
 
 
-$sql = 'SELECT * FROM bruker WHERE uid=? AND pwd=?';
+$sql = 'SELECT * FROM bruker WHERE uname=? AND pwd=?';
 $stm = $db->prepare ($sql);
-$stm->execute (array ($_POST['uname'], md5($_POST['pwd'])));
+$stm->execute (array ($_POST['username'], md5($_POST['password'])));
 if ($row = $stm->fetch()) {
-$_SESSION['user'] = $_POST['uname'];
-echo json_encode (array ('ok'=>'OK'));
+$_SESSION['user'] = $_POST['username'];
+echo  "OK";
 } else
-echo json_encode (array ('bad_username'=>'No match for username/password'));
+echo 'No match for username/password';
 
 ?>
