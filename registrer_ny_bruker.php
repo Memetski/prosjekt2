@@ -10,7 +10,7 @@
 
 <h1>Registrer ny bruker</h1>  
 
-<form action='database.php' method="POST">  
+<form action='db_ny_bruker.php' method="POST">  
 <ul>  
 <label for="uname">Bruker ID:</label> 
 <input type="text" name="uname" size="12" /><br>
