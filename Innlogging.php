@@ -22,7 +22,7 @@ $('#username').focus();
 $('#login').click(function(){
 
 	var username = $('#username');
-	var passord  = $('#password');
+	var password  = $('#password');
 	var login_result = $('.login_result');
 	
 	login_result.html('loading..'); // Animert pre-loader
@@ -47,7 +47,7 @@ $('#login').click(function(){
 				if(responseText == 0){
 					login_result.html('<span class="error">Username or Password Incorrect!</span>');
 				}
-				else if(responseText == 1){
+				else if(responseText == 'OK'){
 					window.location = 'index.php';
 				}
 				else{
