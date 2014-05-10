@@ -6,7 +6,7 @@ $(document).ready (function () {
 	$('#endreBrukerdetaljer').dialog({autoOpen:false, width: "700px", modal: true });
 	$('#blogEntryDisplayDialog').dialog({autoOpen:false, width: "700px", modal: true });
 	$.ajax({
-		url: 'isLoggedIn.php',
+		url: 'ErPaalogget.php',
 		success: function (tmp) {
 			data = eval ('('+tmp+')');
 			if (data.login=='OK') {
@@ -40,7 +40,7 @@ function loggInn(form) {
 	});
 };
 
-function changeUserDetailsDialog () {
+function endreBrukerdetaljer () {
 	$.ajax ({
 		url: 'Brukerdetaljer.php',
 		type: 'post',
@@ -50,14 +50,14 @@ function changeUserDetailsDialog () {
 				alert (data.error);
 				return;
 			}
-			var form = $('#changeUserDetailsDialog form').first()[0];
+			var form = $('#endreBrukerdetaljer form').first()[0];
 			form.uname.value = data.uid;
 			form.uname.disabled = true;
-			form.given.value = data.givenname;
-			form.suren.value = data.surename;
+			form.given.value = data.fornavn;
+			form.suren.value = data.etternavn;
 			form.url.value = data.url;
-			$('#changeUserDetailsDialog img').first()[0].src = 'userImage.php';
-			$('#changeUserDetailsDialog').dialog('open');
+			$('#endreBrukerdetaljer img').first()[0].src = 'userImage.php';
+			$('#endreBrukerdetaljer').dialog('open');
 		}
 	});
 }
@@ -76,8 +76,8 @@ function newUser (form) {
 	$.ajax({
 		url: 'db_ny_bruker.php',
 		type: 'post',
-		data: { uname: form.uname.value, pwd: form.pwd.value, givenname: form.given.value, 
-						surename: form.suren.value, url: form.url.value },
+		data: { uname: form.uname.value, pwd: form.pwd.value, fornavn: form.given.value, 
+						etternavn: form.suren.value, url: form.url.value },
 		success: function (tmp) {
 			data = eval ('('+tmp+')');
 			if (data.ok=="OK") {
@@ -89,10 +89,20 @@ function newUser (form) {
 						$('#left').load ('loginok.php');
 					}
 				});
-				$('#newUserDialog').dialog('close');
+				$('#nyBruker').dialog('close');
 			} else {
 				alert (data.message);
 			}
 		}
 	});
 }
+
+function loggut () {
+	$.ajax({
+		url: 'loggut.php',
+		success: function (tmp) {
+			$('#left').load ('login.html');
+		}
+	});
+	$('#content').load ('allBlogEntries.php');
+};
