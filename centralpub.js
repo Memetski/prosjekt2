@@ -1,3 +1,27 @@
+
+
+$(document).ready (function () {
+	
+	$('#nyBruker').dialog({autoOpen:false, width: "500px", modal: true });
+	$('#endreBrukerdetaljer').dialog({autoOpen:false, width: "700px", modal: true });
+	$('#blogEntryDisplayDialog').dialog({autoOpen:false, width: "700px", modal: true });
+	$.ajax({
+		url: 'isLoggedIn.php',
+		success: function (tmp) {
+			data = eval ('('+tmp+')');
+			if (data.login=='OK') {
+				$('#left').load ('loginok.php');
+				$('#content').load ('mineBloggInnlegg.php');	
+			} else {
+				$('#content').load ('allBlogEntries.php');
+			}
+		}
+	});
+	$('#right').load('right.html');
+});
+
+
+
 function loggInn(form) {
 	$.ajax({
 		url: 'ErPaalogget.php',
@@ -6,11 +30,6 @@ function loggInn(form) {
 		success: function (tmp) {
 			data = eval ('('+tmp+')');
 			if (data.ok == 'OK') {
-				if(geo_position_js.init()) {
-					geo_position_js.getCurrentPosition(geo_success,geo_error,{enableHighAccuracy:true});
-				}	else {
-					alert("Functionality not available");
-				}
 				$('#left').load ('loginok.php');
 				$('#content').load ('mineBloggInnlegg.php');
 			} else {

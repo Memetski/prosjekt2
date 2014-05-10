@@ -20,9 +20,9 @@ if ($_POST['uname']!=$_SESSION['user'])
 	if ($sth->rowCount()==1)
 		$pwdUpdated = 1;
 }
-$sql = 'UPDATE bruker SET givenname=?, surename=?, url=? WHERE uname=?';
+$sql = 'UPDATE bruker SET fornavn=?, etternavn=? WHERE uname=?';
 $sth = $db->prepare ($sql);
-$res = $sth->execute (array ($_POST['givenname'], $_POST['surename'], $_POST['url'], $_SESSION['user']));
+$res = $sth->execute (array ($_POST['fornavn'], $_POST['etternavn'], $_SESSION['user']));
 if ($sth->rowCount()==1||(isset($pwdUpdated)))
 	echo json_encode (array ('message'=>'Oppdatering er lagret i databasen'));
 else
