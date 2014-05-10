@@ -97,6 +97,10 @@ function newUser (form) {
 	});
 }
 
+function newUserDialog () {
+	$('#newUserDialog').dialog('open');
+}
+
 function loggut () {
 	$.ajax({
 		url: 'loggut.php',
