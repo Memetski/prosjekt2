@@ -14,4 +14,3 @@ if ($row=$sth->fetch()) {?>
 	echo "Du er jo ikke logget inn!?!?!";
 }
 ?>
-	

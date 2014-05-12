@@ -1,0 +1,127 @@
+﻿#left input {
+	width: 140px;
+}
+
+#newUserDialog label, #changeUserDetailsDialog label {
+	float: left;
+	display: block;
+	width: 150px;
+}
+
+#newUserDialog input, #changeUserDetailsDialog input {
+	width: 300px;
+}
+
+#newUserDialog input[type=button] {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+#changeUserDetailsDialog input[type=button] {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+#changeUserDetailsDialog input[type=file] {
+	width: 500px;
+}
+
+#changeUserDetailsDialog input[type=submit] {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+#content form label {
+	font-weight: bold;
+}
+
+#content form input[type=text] {
+	width: 300px;
+	margin-bottom: 5px;
+}
+
+#content form input[type=button] {
+	margin-left: 100px;
+	margin-top: 10px;
+	width: 200px;
+}
+
+#blogEntryDisplay .date {
+	float: right;
+	margin-right: 20px;
+}
+
+#blogEntryDisplay .title {
+	font-family: arial;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#blogEntryDisplay .author {
+	font-weight: bold;
+}
+
+#blogEntryDisplay .author:before {
+	content: "Skrevet av : ";
+}
+
+#blogEntryDisplay .entry {
+	width: 100%;
+	height: 460px;
+	overflow: scroll;
+	background: #EEE;
+}
+
+#blogEntryContents #blogEntryDisplay .entry {
+	height: 300px;
+}
+
+#blogEntryContents #blogEntryDisplay .title {
+	display: none;
+}
+
+#blogEntryContents #blogEntryDisplay > a {
+	display: none;
+}
+
+#blogEntryDisplay .editEntry {
+	float: right;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+a {
+	color: #44F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.google_map_entries_list li{
+	padding: 3px;
+}
+
+ul > :nth-child(odd) {
+	background-color: #CCC;
+}
+
+ul > :nth-child(even) {
+	background-color: #EEE;
+}
+
+li {
+	padding: 3px;
+}
+
+.allBlogEntries {
+	width: 100%;
+}

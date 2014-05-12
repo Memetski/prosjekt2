@@ -1,7 +1,7 @@
 
 <?php
 
-
+session_start();
 require_once 'db.php';
 $password = md5($_POST['pwd']); 
 //echo $password;
