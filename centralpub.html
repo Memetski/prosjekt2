@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'db.php';
-print_r($_SESSION);
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,7 @@ print_r($_SESSION);
 $(document).ready (function() {
 	$('#left').load ('login.html');
 });
+
 </script>
 </head>
 <body>
@@ -34,7 +35,7 @@ $(document).ready (function() {
 </div>
 </div>
 <!-- Dialog for registering new users -->
-<div id="nyBruker" style="float:right; title="Registrer ny bruker">
+<div id="nyBruker" style="float:right;visibility:hidden; title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID:</label>    <input type="text" name="uname" size="12" /><br>
 <label for="passid">Passord:</label>     <input type="password" name="pwd" size="12" /><br>
@@ -46,7 +47,7 @@ $(document).ready (function() {
 </div>
 
 <!-- Dialog for changing user details -->
-<div id="endreBrukerdetaljer" style="float:right; title="Registrer ny bruker">
+<div id="endreBrukerdetaljer" style="float:right;visibility:hidden; title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID</label>       <input type="text" name="uname" title="Din e-post adresse"/><br/>
 <label for="pwd">Gjeldende passord</label> <input type="password" name="opwd" title="For å endre passord må du oppgi både nåværende og nytt passord"/><br/>
