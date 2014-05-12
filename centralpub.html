@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'db.php';
+print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,7 @@ $(document).ready (function() {
 <body>
 <div style="width: 100%; text-align:center">
 <h1>Velkommen til Central Pub!</h1>
+
 <div style="width: 1030px; text-align: left;margin-left: auto; margin-right:auto">
 <div id="left" style="float:left; width: 250px; background:#EEE; height: 500px; padding: 5px;"></div>
 <div id="content" style="float:left; width:700px; height: 500px; padding: 5px;">Innhold kommer her</div>

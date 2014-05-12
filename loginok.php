@@ -3,7 +3,7 @@ session_start();
 require_once 'db.php';
 $sql = 'SELECT * FROM bruker WHERE uname=?';
 $sth = $db->prepare ($sql);
-$sth->execute (array ($_SESSION['user']));
+$sth->execute (array ($_SESSION['uname']));
 if ($row=$sth->fetch()) {?>
 <b>Velkommen<br/>
 	<?php echo $row['fornavn']; ?> <?php echo $row['etternavn']; ?></b><br>
