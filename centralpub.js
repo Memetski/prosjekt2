@@ -1,6 +1,6 @@
 
 
-$(document).ready (function () {
+/*$(document).ready (function () {
 	
 	$('#nyBruker').dialog({autoOpen:false, width: "500px", modal: true });
 	$('#endreBrukerdetaljer').dialog({autoOpen:false, width: "700px", modal: true });
@@ -19,7 +19,7 @@ $(document).ready (function () {
 	});
 	$('#right').load('right.html');
 });
-
+*/
 
 
 function loggInn(form) {
