@@ -21,27 +21,26 @@ $(document).ready (function() {
 <div style="width: 100%; text-align:center">
 <h1>Velkommen til Central Pub!</h1>
 <div style="width: 1030px; text-align: left;margin-left: auto; margin-right:auto">
-<div id="left" style="float:left; width:150px; background:#DDD; height: 500px; padding: 5px;"></div>
-<div id="content" style="float:left; width:700px; height: 500px; padding: 5px;">bla</div>
-<div id="right" style="float:left; width:150px; background:#DDD; height: 500px; padding: 5px;"></div>
+<div id="left" style="float:left; width: 250px; background:#EEE; height: 500px; padding: 5px;"></div>
+<div id="content" style="float:left; width:700px; height: 500px; padding: 5px;">Innhold kommer her</div>
+
 </div>
 </div>
 <!-- Dialog for registering new users -->
-<div id="nyBruker" title="Registrer ny bruker">
+<div id="nyBruker" style="float:right; title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID:</label>    <input type="text" name="uname" size="12" /><br>
 <label for="passid">Passord:</label>     <input type="password" name="pwd" size="12" /><br>
 <label for="username">Fornavn:</label>   <input type="text" name="fornavn" size="50" /><br>
 <label for="username">Etternavn:</label> <input type="text" name="etternavn" size="50" /><br>
 <label for="email">Email:</label>        <input type="text" name="email" size="50" /> <br>
-<input type="button" value="Registrer ny bruker" onclick="javascript:newUser(this.form);"/>
+<input type="button" value="Registrer ny bruker" onclick="javascript:nyBruker(this.form);"/>
 </form>
 </div>
 
 <!-- Dialog for changing user details -->
-<div id="endreBrukerdetaljer" title="Registrer ny bruker">
+<div id="endreBrukerdetaljer" style="float:right; title="Registrer ny bruker">
 <form onsubmit="return false;">
-<img src="Avatar-head.gif" style="float:right; margin-right: 20px;">
 <label for="uname">Bruker ID</label>       <input type="text" name="uname" title="Din e-post adresse"/><br/>
 <label for="pwd">Gjeldende passord</label> <input type="password" name="opwd" title="For å endre passord må du oppgi både nåværende og nytt passord"/><br/>
 <label for="pwd">Passord</label>           <input type="password" name="pwd" title="La være blankt for ikke å endre passord"/><br/>
@@ -49,8 +48,9 @@ $(document).ready (function() {
 <label for="given">Fornavn</label>         <input type="text" name="fornavn"/><br/>
 <label for="suren">Etternavn</label>       <input type="text" name="etternavn"/><br/>
 <label for="email">Email</label>           <input type="text" name="email"/><br/>
-<input type="button" value="Oppdater brukerdata" onclick="javascript:changeUserDetails(this.form);"/>
+<input type="button" value="Oppdater brukerdata" onclick="javascript:endreBrukerdetaljer(this.form);"/>
 </form>
+
 <form id="" method="post" target="upload_target" enctype="multipart/form-data" action="uploadUserImage.php">
 <label for="file">Nytt bilde</label><input name="file" id="file" type="file" /><br />
 <input type="submit" name="action" value="Last opp nytt bilde" /><br />

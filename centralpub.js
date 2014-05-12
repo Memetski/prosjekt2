@@ -11,9 +11,9 @@ $(document).ready (function () {
 			data = eval ('('+tmp+')');
 			if (data.login=='OK') {
 				$('#left').load ('loginok.php');
-				$('#content').load ('mineBloggInnlegg.php');	
+				$('#content').load ('loginok.php');	
 			} else {
-				$('#content').load ('allBlogEntries.php');
+				$('#content').load ('centralpub.html');
 			}
 		}
 	});
@@ -31,7 +31,7 @@ function loggInn(form) {
 			data = eval ('('+tmp+')');
 			if (data.ok == 'OK') {
 				$('#left').load ('loginok.php');
-				$('#content').load ('mineBloggInnlegg.php');
+				$('#content').load ('centralpub.html');
 			} else {
 				$('#left div').first().show();
 				$('#left input').first().get(0).focus();
@@ -62,7 +62,7 @@ function endreBrukerdetaljer () {
 	});
 }
 
-function newUser (form) {
+function nyBruker (form) {
 	if (form.uname.value.length<6) {
 		alert ("Brukernavnet må være minst 6 karakterer langt");
 		form.uname.focus();

@@ -19,6 +19,6 @@ VALUES ('" . $_POST["uname"] . "', '" . $password . "', '" . $_POST["fornavn"] .
 mysql_close($db);*/
 
 
-header ("Location: index.php");
+header ("Location: centralpub.html");
 
 ?>

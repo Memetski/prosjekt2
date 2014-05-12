@@ -7,9 +7,9 @@ require_once 'db.php';
 
 $sql = 'SELECT * FROM bruker WHERE uname=? AND pwd=?';
 $stm = $db->prepare ($sql);
-$stm->execute (array ($_POST['username'], md5($_POST['password'])));
+$stm->execute (array ($_POST['uname'], md5($_POST['pwd'])));
 if ($row = $stm->fetch()) {
-$_SESSION['user'] = $_POST['username'];
+$_SESSION['user'] = $_POST['uname'];
 echo  "OK";
 } else
 echo 'No match for username/password';
