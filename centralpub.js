@@ -4,20 +4,17 @@
 	
 	$('#nyBruker').dialog({autoOpen:false, width: "500px", modal: true });
 	$('#endreBrukerdetaljer').dialog({autoOpen:false, width: "700px", modal: true });
-	$('#blogEntryDisplayDialog').dialog({autoOpen:false, width: "700px", modal: true });
 	$.ajax({
 		url: 'ErPaalogget.php',
 		success: function (tmp) {
 			data = eval ('('+tmp+')');
 			if (data.login=='OK') {
-				$('#left').load ('loginok.php');
-				$('#content').load ('loginok.php');	
+				$('#left').load ('loginok.php');	
 			} else {
 				$('#content').load ('centralpub.html');
 			}
 		}
 	});
-	$('#right').load('right.html');
 });
 */
 
@@ -27,11 +24,9 @@ function loggInn(form) {
 		url: 'ErPaalogget.php',
 		type: 'post',
 		data: {'uname': form.uname.value, 'pwd': form.pwd.value},
-		success: function (tmp) {
-			data = eval ('('+tmp+')');
+		success: function (data) {
 			if (data.ok == 'OK') {
 				$('#left').load ('loginok.php');
-				$('#content').load ('centralpub.html');
 			} else {
 				$('#left div').first().show();
 				$('#left input').first().get(0).focus();
