@@ -18,6 +18,18 @@
 });
 */
 
+    $(document).ready (function () {
+    $.ajax({
+    url: 'aktivSesjon.php',
+    success: function (data) {
+    if (data.login=='OK') {
+    $('#left').load ('loginok.php');
+    } else
+    $('#left').load ('login.html');
+    }
+    });
+    });
+
 
 
 function loggInn(form) {
