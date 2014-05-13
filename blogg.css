@@ -2,17 +2,17 @@
 	width: 140px;
 }
 
-#newUserDialog label, #changeUserDetailsDialog label {
+#nyBrukerDialog label, #changeUserDetailsDialog label {
 	float: left;
 	display: block;
 	width: 150px;
 }
 
-#newUserDialog input, #changeUserDetailsDialog input {
+#nyBrukerDialog input, #changeUserDetailsDialog input {
 	width: 300px;
 }
 
-#newUserDialog input[type=button] {
+#nyBrukerDialog input[type=button] {
 	margin-top: 20px;
 	margin-left: 100px;
 }

@@ -62,10 +62,9 @@ function endreBrukerdetaljer () {
 			var form = $('#endreBrukerdetaljer form').first()[0];
 			form.uname.value = data.uid;
 			form.uname.disabled = true;
-			form.given.value = data.fornavn;
-			form.suren.value = data.etternavn;
-			form.url.value = data.url;
-			$('#endreBrukerdetaljer img').first()[0].src = 'userImage.php';
+			form.fornavn.value = data.fornavn;
+			form.etternavn.value = data.etternavn;
+			form.email.value = data.email;
 			$('#endreBrukerdetaljer').dialog('open');
 		}
 	});
@@ -73,7 +72,7 @@ function endreBrukerdetaljer () {
 
 function nyBruker (form) {
 
-
+/*
 	if (form.uname.value.length<6) {
 		alert ("Brukernavnet må være minst 6 karakterer langt");
 		form.uname.focus();
@@ -83,12 +82,12 @@ function nyBruker (form) {
 	} else if (form.pwd.value.length<6) {
 		alert ("Passordet må være minst 6 karakterer langt");
 		form.pwd.focus();
-	}
+	}*/
 	$.ajax({
-		url: 'db_ny_bruker.php',
+		url: 'opprettBruker.php',
 		type: 'post',
-		data: { uname: form.uname.value, pwd: form.pwd.value, fornavn: form.given.value, 
-						etternavn: form.suren.value, url: form.url.value },
+		data: { uname: form.uname.value, pwd: form.pwd.value, fornavn: form.fornavn.value, 
+						etternavn: form.etternavn.value, email: form.email.value },
 		success: function (tmp) {
 			data = eval ('('+tmp+')');
 			if (data.ok=="OK") {
@@ -100,7 +99,7 @@ function nyBruker (form) {
 						$('#left').load ('loginok.php');
 					}
 				});
-				$('#nyBruker').dialog('close');
+				$('#nyBrukerDialog').dialog('close');
 			} else {
 				alert (data.message);
 			}
@@ -108,8 +107,8 @@ function nyBruker (form) {
 	});
 }
 
-function newUserDialog () {
-	$('#newUserDialog').dialog('open');
+function nyBrukerDialog () {
+	$('#nyBrukerDialog').dialog('open');
 }
 
 function loggut () {
@@ -119,5 +118,4 @@ function loggut () {
 			$('#left').load ('login.html');
 		}
 	});
-	$('#content').load ('allBlogEntries.php');
 };
