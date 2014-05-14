@@ -49,7 +49,7 @@ function loggInn(form) {
 	});
 };
 
-function endreBrukerdetaljer () {
+function endreBrukerdetaljerDialog () {
 	$.ajax ({
 		url: 'Brukerdetaljer.php',
 		type: 'post',
@@ -66,6 +66,29 @@ function endreBrukerdetaljer () {
 			form.etternavn.value = data.etternavn;
 			form.email.value = data.email;
 			$('#endreBrukerdetaljer').dialog('open');
+		}
+	});
+}
+
+function endreBrukerdetaljer (form) {
+	/*if (form.pwd.value.length>0&&form.opwd.value.length<6) {
+		alert ("Du må oppgi det gamle passordet for å sette nytt passord");
+		form.opwd.focus();
+	} else if (form.pwd.value!=form.pwd1.value) {
+		alert ("De nye passordene dine matcher ikke");
+		form.pwd.focus();
+	} else if (form.pwd.value.length>0&&form.pwd.value.length<6) {
+		alert ("Passord må være minst 6 karakterer langt");
+		form.pwd.focus();
+	}*/
+	$.ajax({
+		url: 'Endre_brukerdetaljer.php',
+		type: 'post',
+		data: { uname: form.uname.value, opwd: form.opwd.value, pwd: form.pwd.value, 
+						fornavn: form.fornavn.value, etternavn: form.etternavn.value, email: form.email.value },
+		success: function (tmp) {
+			data = eval ('('+tmp+')');
+			alert (data.message);
 		}
 	});
 }
@@ -110,6 +133,8 @@ function nyBruker (form) {
 function nyBrukerDialog () {
 	$('#nyBrukerDialog').dialog('open');
 }
+
+
 
 function loggut () {
 	$.ajax({
