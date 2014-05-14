@@ -156,3 +156,54 @@ function map () {
 	
 	
 }
+
+
+function band () {
+	$.ajax({
+		url: 'band.php',
+		success: function (tmp) {
+			$('#content').load ('band.php');
+		}
+	});
+}
+
+function bandInsert (form) {
+
+	$.ajax({
+		url: 'opprettBand.php',
+		type: 'post',
+		data: { bname: form.bname.value, year: form.year.value, info: form.info.value},
+		success: function (tmp) {
+			data = eval ('('+tmp+')');
+			if (data.ok=="OK") {
+				$.ajax({
+					url: 'opprettBand.php',
+					type: 'post',
+					data: {'bname': form.bname.value, 'year': form.year.value, 'info': form.info.value},
+					success: function (tmp) {
+						$('#content').load ('band.php');
+					}
+				});
+				$('#nyttBand').dialog('close');
+			} else {
+				alert (data.message);
+			}
+		}
+	});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
