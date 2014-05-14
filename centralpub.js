@@ -150,8 +150,9 @@ function map () {
 	$.ajax({
 		url: 'map.html',
 		success: function (tmp) {
-			$('#right').load ('map.html');
+			$('#content').load ('map.html');
 		}
 	});
-	$('#content').load ('map.html');
+	
+	
 }
