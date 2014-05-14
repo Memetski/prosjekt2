@@ -28,7 +28,7 @@
     $('#left').load ('login.html');
     }
     });
-    });
+    })
 
 
 
@@ -47,7 +47,7 @@ function loggInn(form) {
 			}
 		}
 	});
-};
+}
 
 function endreBrukerdetaljerDialog () {
 	$.ajax ({
@@ -136,6 +136,7 @@ function nyBrukerDialog () {
 
 
 
+
 function loggut () {
 	$.ajax({
 		url: 'loggut.php',
@@ -143,7 +144,7 @@ function loggut () {
 			$('#left').load ('login.html');
 		}
 	});
-};
+}
 
 function map () {
 	$.ajax({
@@ -153,4 +154,4 @@ function map () {
 		}
 	});
 	$('#content').load ('map.html');
-};
+}
