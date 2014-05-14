@@ -59,19 +59,19 @@ function endreBrukerdetaljerDialog () {
 				alert (data.error);
 				return;
 			}
-			var form = $('#endreBrukerdetaljer form').first()[0];
+			var form = $('#endreBrukerdetaljerDialog form').first()[0];
 			form.uname.value = data.uid;
 			form.uname.disabled = true;
 			form.fornavn.value = data.fornavn;
 			form.etternavn.value = data.etternavn;
 			form.email.value = data.email;
-			$('#endreBrukerdetaljer').dialog('open');
+			$('#endreBrukerdetaljerDialog').dialog('open');
 		}
 	});
 }
 
 function endreBrukerdetaljer (form) {
-	/*if (form.pwd.value.length>0&&form.opwd.value.length<6) {
+/*	if (form.pwd.value.length>0&&form.opwd.value.length<6) {
 		alert ("Du må oppgi det gamle passordet for å sette nytt passord");
 		form.opwd.focus();
 	} else if (form.pwd.value!=form.pwd1.value) {

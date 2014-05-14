@@ -18,11 +18,11 @@ require_once 'db.php';
 <script src="centralpub.js" type="text/javascript"></script>
 <title>Central Pub</title>
 <script type="text/javascript">
-$(document).ready (function() {
+/*$(document).ready (function() {
 	$('#nyBrukerDialog').dialog ({autoOpen:false, width: "500px"});
 	$('#endreBrukerdetaljer').dialog ({autoOpen:false, width: "500px"});
 });
-
+*/
 </script>
 </head>
 <body>
@@ -51,7 +51,7 @@ $(document).ready (function() {
 <div id="endreBrukerdetaljerDialog" style="float:right;" title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID</label>       <input type="text" name="uname" title="Din e-post adresse"/><br/>
-<label for="pwd">Gjeldende passord</label> <input type="password" name="opwd" title="For å endre passord må du oppgi både nåværende og nytt passord"/><br/>
+<label for="owd">Gjeldende passord</label> <input type="password" name="opwd" title="For å endre passord må du oppgi både nåværende og nytt passord"/><br/>
 <label for="pwd">Passord</label>           <input type="password" name="pwd" title="La være blankt for ikke å endre passord"/><br/>
 <label for="pwd1">Bekreft passord</label>  <input type="password" name="pwd1" title="La være blankt for ikke å endre passord"/><br/>
 <label for="fornavn">Fornavn</label>         <input type="text" name="fornavn"/><br/>
