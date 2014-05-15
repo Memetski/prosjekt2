@@ -35,7 +35,8 @@ require_once 'db.php';
 
 </div>
 </div>
-<!-- Dialog for registering new users -->
+
+<!-- Dialog for registering new users 
 <div id="nyBrukerDialog" style="float:right;" title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID:</label>    <input type="text" name="uname" size="12" /><br>
@@ -47,7 +48,7 @@ require_once 'db.php';
 </form>
 </div>
 
-<!-- Dialog for changing user details -->
+<!-- Dialog for changing user details 
 <div id="endreBrukerdetaljerDialog" style="float:right;" title="Registrer ny bruker">
 <form onsubmit="return false;">
 <label for="uname">Bruker ID</label>       <input type="text" name="uname" title="Din e-post adresse"/><br/>
@@ -59,7 +60,7 @@ require_once 'db.php';
 <label for="email">Email</label>           <input type="text" name="email"/><br/>
 <input type="button" value="Oppdater brukerdata" onclick="javascript:endreBrukerdetaljer(this.form);"/>
 </form>
-
+-->
 <form id="" method="post" target="upload_target" enctype="multipart/form-data" action="uploadUserImage.php">
 <label for="file">Nytt bilde</label><input name="file" id="file" type="file" /><br />
 <input type="submit" name="action" value="Last opp nytt bilde" /><br />

@@ -15,6 +15,9 @@ require_once 'db.php';
 </form>
 </div>
 
+
+
+
 <!--
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
  <textarea id="Comments" name="Comments">
