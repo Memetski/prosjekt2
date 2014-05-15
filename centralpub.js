@@ -223,39 +223,6 @@ function brukerInsert (form) {
 		}
 	});
 }
-//Henter in mal for insert av Brukerdetaljer
-function endreBruker () {
-	$.ajax({
-		url: 'endrebruk.php',
-		success: function (tmp) {
-			$('#content').load ('endrebruk.php');
-		}
-	});
-}
-//For å hente inn informasjonen du skal sette i databasen
-function endreBrukerInsert (form) {
-	$.ajax({
-		url: 'Endre_brukerdetaljer.php',
-		type: 'post',
-		data: { uname: form.uname.value, opwd: form.opwd.value, pwd: form.pwd.value, pwd1: form.pwd1.value fornavn: form.fornavn.value, etternavn: form.etternavn.value, email: form.email.value},
-		success: function (tmp) {
-			data = eval ('('+tmp+')');
-			if (data.ok=="OK") {
-				$.ajax({
-					url: 'Endre_brukerdetaljer.php',
-					type: 'post',
-					data: {'uname': form.uname.value, 'fornavn': form.fornavn.value, 'etternavn': form.etternavn.value, 'email': form.email.value, 'pwd': form.pwd.value, 'opwd': form.opwd.value},
-					success: function (tmp) {
-						$('#content').load ('endrebruk.php');
-					}
-				});
-				$('#endreBrukerdetaljerDialog').dialog('close');
-			} else {
-				alert (data.message);
-			}
-		}
-	});
-}
 
 
 

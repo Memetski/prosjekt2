@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 require_once 'db.php';
 
 $sql = 'INSERT INTO bruker (uname, fornavn, etternavn, email, pwd) VALUES (?, ?, ?, ?, ?)';
