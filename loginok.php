@@ -9,8 +9,10 @@ if ($row=$sth->fetch()) {?>
 	<?php echo $row['fornavn']; ?> <?php echo $row['etternavn']; ?> </b><br>
 	<a href="javascript:endreBrukerdetaljerDialog()">Endre brukerdata</a><br/>
 	<input type="button" value="Logg ut" onclick="javascript:loggut();"/>
+	<!--<input type="button" value="Endre bruker" onclick="javascript:endreBruker();"/>-->
 	<input type="button" value="Kart" onclick="javascript:map();"/>
 	<input type="button" value="Registrer band" onclick="javascript:band();"/>
+	
 	<?php
 } else {
 	echo "Du er jo ikke logget inn!?!?!";
